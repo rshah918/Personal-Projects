@@ -140,7 +140,7 @@ def runDetector(windowSize=60,displayThreshold=0.998):
         frame_arry = np.array(gray)
         #predict
         predictions = predict(model, frame_arry, windowSize=windowSize,displayThreshold=displayThreshold)
-        #get bounding boxes
+        #get bounding box pixel coordinates
         boxes = []
         faces = getPredictionCoordinates(frame_arry, predictions)
         for(x,y,x2,y2) in faces:
